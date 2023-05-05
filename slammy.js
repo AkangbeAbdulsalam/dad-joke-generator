@@ -18,7 +18,8 @@ async function getjoke() {
 
     try {
         
-    jokeEl.innerText = "laugh for me";
+    jokeEl.innerText = "updating...";
+
     btnEl.disabled = true;
     btnEl.innerText ="loading...";
 
@@ -30,6 +31,11 @@ async function getjoke() {
 
    jokeEl.innerText = data[0].joke
     } catch (error) {
+    jokeEl.innerText = "error, try again later"
+
+    btnEl.disabled = false;
+    btnEl.innerText ="TELL ME A JOKE";
+
         console.log(error);
 
 
